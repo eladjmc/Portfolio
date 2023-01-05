@@ -1,0 +1,157 @@
+:root {
+  --main-color: #009e66;
+  --black-lighter-color: #101010;
+  --dark: #343a40;
+  --text-color: #ffffff;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+
+.menu-display{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+}
+.navbar-container {
+  height: 7rem;
+  width: 100vw;
+  font-size: 1.8rem;
+  display: flex;
+  background-color: var(--main-color);
+  position: fixed;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container > .navbar-warper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  gap: 50%;
+}
+
+.navbar-warper > .hamburger-menu,
+.navbar-warper > input {
+  position: absolute;
+  right: 1.5%;
+  top: 14%;
+  width: 30px;
+  height: 30px;
+}
+.navbar-warper > input {
+  display: inline-block;
+  opacity: 0;
+  z-index: 3;
+}
+
+.navbar-warper > .hamburger-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility:hidden ;
+}
+
+.navbar-warper > .hamburger-menu > .hamburger-line {
+  height: 2px;
+  width: 80%;
+  background-color: var(--text-color);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-warper > .hamburger-menu > .hamburger-line::after,
+.navbar-warper > .hamburger-menu > .hamburger-line::before {
+  height: 2px;
+  width: 100%;
+  background-color: var(--text-color);
+  content: "";
+  position: absolute;
+  top: -1rem;
+}
+.navbar-warper > .hamburger-menu > .hamburger-line::before {
+  top: 1rem;
+}
+
+.navbar-warper > input:checked + .hamburger-menu > .hamburger-line {
+  transform: rotate(135deg);
+}
+.navbar-warper > input:checked + .hamburger-menu > .hamburger-line::before,
+.navbar-warper > input:checked + .hamburger-menu > .hamburger-line::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+
+.homepage-tooltip {
+  position: relative;
+}
+
+.homepage-tooltip .tooltip-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  width: 6rem;
+  height: 2rem;
+  background-color: var(--text-color);
+  color: var(--dark);
+  border: var(--text-color) 1px solid;
+  text-align: center;
+  border-radius: 1rem;
+  opacity: 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 47%;
+  right: -60%;
+  transition: opacity 0.7s ease-out;
+}
+.homepage-tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  bottom: 20%;
+  left: -16%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent var(--text-color) transparent transparent;
+  transition: opacity 1s;
+}
+
+.homepage-tooltip:hover .tooltip-text {
+  opacity: 0.4;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+}
+
+.navbar-container ul a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-color);
+  position: relative;
+}
+.navbar-container ul a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.7rem;
+  background-color: transparent;
+  border-bottom: var(--text-color) dotted 5px;
+  width: 0;
+  height: 0.1rem;
+  transition: all 0.5s;
+}
+
+.navbar-container ul a:hover::after{
+    width: 110%;
+}

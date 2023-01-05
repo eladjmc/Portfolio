@@ -1,0 +1,124 @@
+@media (max-width: 900px) {
+  body,
+  html {
+    font-size: 50%;
+  }
+
+  .navbar-container {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+
+  .navbar-container .navbar-warper {
+    justify-content: flex-start;
+  }
+  .logo > svg {
+    transform: scale(0.7);
+  }
+  .homepage-tooltip .tooltip-text {
+    position: absolute;
+    right: -4rem;
+  }
+  .navbar-container ul {
+    display: none;
+  }
+
+  .navbar-warper > .hamburger-menu > input {
+    z-index: 3;
+  }
+  .navbar-warper > .hamburger-menu {
+    display: flex;
+    cursor: pointer;
+    visibility: visible;
+  }
+
+  .navbar-warper > input:checked ~ .menu-display {
+    position: absolute;
+    top: 0;
+    visibility: visible;
+  }
+
+  .navbar-warper > input:checked ~ .menu-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .header-color-hamburger {
+    background-color: transparent;
+    height: 7rem;
+    width: 100%;
+  }
+
+  .menu-display > .menu-links-warper {
+    width: 100%;
+    height: calc(30vh - 7rem);
+    display: grid;
+    grid-template-areas:
+      "home"
+      "about"
+      "portfolio"
+      "contact";
+    gap: 1px;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: all .3s linear;
+  }
+
+  .navbar-warper > input:checked ~ .menu-display > .menu-links-warper {
+    transform: scaleY(1);
+  }
+
+
+  .menu-display > .menu-links-warper > * {
+    visibility: hidden;
+  }
+  .navbar-warper > input:checked ~ .menu-display > .menu-links-warper  *{
+    visibility: visible;
+  }
+  .menu-display > .menu-links-warper > a {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 5rem;
+    align-items: center;
+    background-color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.058);
+    transition: color .4s ;
+  }
+
+  .menu-display > .menu-links-warper > .home-link-tablet {
+    grid-area: home;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.444);
+  }
+  .menu-display > .menu-links-warper > .about-link-tablet {
+    grid-area: about;
+  }
+  .menu-display > .menu-links-warper > .portfolio-link-tablet {
+    grid-area: portfolio;
+  }
+  .menu-display > .menu-links-warper > .contact-link-tablet {
+    grid-area: contact;
+  }
+
+  .navbar-warper > input:checked ~ .menu-display > .header-color-hamburger {
+    background-color: var(--black-lighter-color);
+  }
+
+  .menu-display > .menu-links-warper > a:hover{
+    color:#F47E1E;
+    background-color: #f8f8f8;
+  }
+
+}
