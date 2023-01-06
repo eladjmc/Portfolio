@@ -74,15 +74,10 @@
 
   .navbar-warper > input:checked ~ .menu-display > .menu-links-warper {
     transform: scaleY(1);
+    transition: all .3s linear;
   }
 
 
-  .menu-display > .menu-links-warper > * {
-    visibility: hidden;
-  }
-  .navbar-warper > input:checked ~ .menu-display > .menu-links-warper  *{
-    visibility: visible;
-  }
   .menu-display > .menu-links-warper > a {
     width: 100%;
     display: flex;
