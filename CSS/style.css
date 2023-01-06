@@ -1,3 +1,7 @@
+@font-face {
+  font-family: mono;
+  src: url("/assets/fonts/SFMonoRegular.otf");
+}
 :root {
   --main-color: #009e66;
   --black-lighter-color: #101010;
@@ -7,13 +11,43 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
+  --mono-font: mono;
+}
+.fa-solid.fa-angle-up {
+  transform: scale(0.8);
 }
 
+ul {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+}
 
-.menu-display{
-    visibility: hidden;
-    position: absolute;
-    top: 0;
+/* ###################################################################################################### */
+/* ####                                                                                             ##### */
+/* ####                                 Navbar page style                                           ##### */
+/* ####                                                                                             ##### */
+/* ###################################################################################################### */
+
+.top-page-button {
+  padding-top: 4px;
+  position: fixed;
+  z-index: 10;
+  background: #009e66 none repeat scroll 0 0;
+  bottom: 30px;
+  color: #fff;
+  font-size: 30px;
+  height: 48px;
+  line-height: 48px;
+  right: 114px;
+  text-align: center;
+  width: 48px;
+}
+
+.menu-display {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
 }
 .navbar-container {
   height: 7rem;
@@ -25,15 +59,17 @@
   top: 0;
   right: 0;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
 
 .navbar-container > .navbar-warper {
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   position: relative;
+  padding: 0 4rem;
   gap: 50%;
 }
 
@@ -55,7 +91,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  visibility:hidden ;
+  visibility: hidden;
 }
 
 .navbar-warper > .hamburger-menu > .hamburger-line {
@@ -88,11 +124,12 @@
   transform: rotate(90deg);
 }
 
-
+/* not related to home page section - just a name */
 .homepage-tooltip {
   position: relative;
 }
 
+/* not related to home page section - just a name */
 .homepage-tooltip .tooltip-text {
   display: flex;
   justify-content: center;
@@ -106,7 +143,6 @@
   text-align: center;
   border-radius: 1rem;
   opacity: 0;
-  /* Position the tooltip */
   position: absolute;
   z-index: 1;
   bottom: 47%;
@@ -122,16 +158,6 @@
   border-style: solid;
   border-color: transparent var(--text-color) transparent transparent;
   transition: opacity 1s;
-}
-
-.homepage-tooltip:hover .tooltip-text {
-  opacity: 0.4;
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  gap: 4rem;
 }
 
 .navbar-container ul a {
@@ -152,6 +178,131 @@ ul {
   transition: all 0.3s;
 }
 
-.navbar-container ul a:hover::after{
-    width: 110%;
+.navbar-container ul a:hover::after {
+  width: 110%;
+}
+
+/* ###################################################################################################### */
+/* ####                                                                                             ##### */
+/* ####                                 Home page style                                             ##### */
+/* ####                                                                                             ##### */
+/* ###################################################################################################### */
+
+.background-img {
+  width: 100vw;
+  height: 100vh;
+  background: url("/assets/images/main_background2.jpg") no-repeat center
+    center/cover;
+  position: fixed;
+  top: 0;
+  z-index: -2;
+}
+.background-img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -2;
+  background-color: #000000;
+  opacity: 0.6;
+}
+
+.home-page-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+.home-page-container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 7rem;
+}
+
+.homepage-tooltip:hover .tooltip-text {
+  opacity: 0.4;
+}
+
+.home-page-container h1,
+h2 {
+  font-size: 5rem;
+}
+
+.home-page-container h3 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.home-page-container .logo-display {
+  background-color: var(--main-color);
+  width: 13rem;
+  height: 6rem;
+  transform: skew(48deg, 10deg);
+  position: relative;
+}
+
+.home-page-container .logo-image {
+  position: absolute;
+  left: -1rem;
+  top: -4rem;
+  transform: skew(-48deg, -10deg);
+}
+.logo-image #bdbcagbh {
+  width: 20rem;
+}
+
+.home-page-container .animation-warper {
+  display: flex;
+  gap: 2rem;
+}
+.home-page-container .about-button {
+  width: 16rem;
+  height: 4.5rem;
+  background-color: var(--text-color);
+  color: var(--main-color);
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s;
+}
+.home-page-container .about-button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 30rem;
+  height: 30rem;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: all 0.3s;
+}
+
+.home-page-container .about-button:hover {
+  color: var(--text-color);
+}
+.home-page-container .about-button span {
+  z-index: 1;
+}
+.home-page-container .about-button:hover::after {
+  transform: scale(1) translate(-50%, -50%);
+}
+/* ###################################################################################################### */
+/* ####                                                                                             ##### */
+/* ####                                 About page style                                            ##### */
+/* ####                                                                                             ##### */
+/* ###################################################################################################### */
+.about-page-section {
 }

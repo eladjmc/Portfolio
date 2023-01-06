@@ -51,6 +51,10 @@
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   }
 
+  .navbar-container > .navbar-warper{
+    padding: 0 4rem;
+  }
+
   .header-color-hamburger {
     background-color: transparent;
     height: 7rem;
