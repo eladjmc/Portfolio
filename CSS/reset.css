@@ -15,7 +15,6 @@ html{
 body, html {
     font-size: 62.5%;
     font-family: 'Montserrat', sans-serif;
-    transition: all 0.3s ease;
 }
 a{
     text-decoration: none;

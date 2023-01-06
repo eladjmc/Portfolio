@@ -3,7 +3,7 @@
   src: url("/assets/fonts/SFMonoRegular.otf");
 }
 :root {
-  --main-color: #009e66;
+  --main-color: git;
   --black-lighter-color: #101010;
   --dark: #343a40;
   --text-color: #ffffff;
@@ -299,10 +299,21 @@ h2 {
 .home-page-container .about-button:hover::after {
   transform: scale(1) translate(-50%, -50%);
 }
+
 /* ###################################################################################################### */
 /* ####                                                                                             ##### */
 /* ####                                 About page style                                            ##### */
 /* ####                                                                                             ##### */
 /* ###################################################################################################### */
+
 .about-page-section {
+  height: 100vh;
+  width: 100%;
+  background-image:linear-gradient(80deg, rgba(16,16,16,1) 0%, rgba(0,158,102,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-page-section p{
+  font-size: 1.6rem;
 }
