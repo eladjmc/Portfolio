@@ -357,7 +357,7 @@ h2 {
 }
 
 .about-page-section p {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .image-container {
@@ -620,4 +620,9 @@ margin-top: 4rem;
 .about-info-warper {
   max-width: 100rem;
 }
+
+.about-page-section p {
+  font-size: 2rem;
+}
+
 }
