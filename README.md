@@ -2,7 +2,7 @@
 # 🚀 About Me Personal Site
 I was given a task @AppleSeeds Bootcamp to make a POC personal portfolio page while only using ```HTML``` and ```CSS```
 
-my design was straightforward and included 4 section -
+my design was straightforward and included 4 sections -
 
 
 #### Home Section 
@@ -25,12 +25,11 @@ https://elad-personal.netlify.app/
 
 ## Screenshots
 
+![Alt text](assets/images/Screenshot1.png?raw=true "Title")
 
-<img src="assets/images/Screenshot1" width="200" height="200" />
+![plot](./assets/images/Screenshot2.png)
 
-<img src="assets/images/Screenshot2"width="200" height="200" />
-
-<img src="assets/images/Screenshot3" width="200" height="200" />
+![plot](./assets/images/Screenshot3.png)
 
 
 ## Deployment
