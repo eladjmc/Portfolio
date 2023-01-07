@@ -25,12 +25,11 @@ https://elad-personal.netlify.app/
 
 ## Screenshots
 
+![Alt text](assets/images/Screenshot1.png?raw=true "Title")
 
-<img src="assets/images/Screenshot1" width="200" height="200" />
+![plot](./assets/images/Screenshot2.png)
 
-<img src="assets/images/Screenshot2"width="200" height="200" />
-
-<img src="assets/images/Screenshot3" width="200" height="200" />
+![plot](./assets/images/Screenshot3.png)
 
 
 ## Deployment
