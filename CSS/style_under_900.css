@@ -75,9 +75,6 @@
     transition: all  .3s linear;
   }
 
-  .navbar-warper > input:checked ~.menu-display > .menu-links-warper > a{
-    
-  }
 
   .menu-display > .menu-links-warper > a {
     width: 100%;
