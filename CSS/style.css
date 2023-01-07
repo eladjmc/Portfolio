@@ -7,10 +7,7 @@
   --black-lighter-color: #101010;
   --dark: #343a40;
   --text-color: #ffffff;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
+  --breakpoint-lg: 900px;
   --mono-font: mono;
 }
 
@@ -42,7 +39,7 @@ ul li p {
   z-index: 10;
   background: var(--main-color) none repeat scroll 0 0;
   bottom: 30px;
-  color: #fff;
+  color: var(--text-color);
   font-size: 30px;
   height: 48px;
   line-height: 48px;
@@ -211,7 +208,7 @@ ul li p {
   position: absolute;
   top: 0;
   z-index: -2;
-  background-color: #000000;
+  background-color: #000;
   opacity: 0.6;
 }
 
@@ -468,7 +465,7 @@ h2 {
 }
 .grid-photos-of-projects > a::after {
   content: "";
-  color: #ffffff;
+  color: var(--text-color);
   font-size: 1.9rem;
   display: flex;
   height: 100%;
@@ -482,12 +479,12 @@ h2 {
 }
 
 .grid-photos-of-projects > a:hover {
-  background: #009e66;
+  background: var(--main-color);
   bottom: 1rem;
 }
 
 .grid-photos-of-projects > .site-three:hover {
-  background: #009e66;
+  background: var(--main-color);
   bottom: -1rem;
 }
 
@@ -587,6 +584,13 @@ h2 {
   background-color: var(--main-color);
   color: var(--text-color);
 }
+
+
+/* ###################################################################################################### */
+/* ####                                                                                             ##### */
+/* ####                                 Wider Screens page style adjustments                        ##### */
+/* ####                                                                                             ##### */
+/* ###################################################################################################### */
 
 @media (min-width: 900px) {
   .card {
